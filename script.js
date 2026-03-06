@@ -1,53 +1,38 @@
-function random(list){
-return list[Math.floor(Math.random()*list.length)];
-}
-
 function scanToken(){
 
-let trust=[
-"AI Trust Score: 82%",
-"AI Trust Score: 60%",
-"AI Trust Score: 41%",
-"AI Trust Score: 91%"
-];
+let token = document.getElementById("tokenInput").value;
 
-let liquidity=[
-"Liquidity Risk: Low",
-"Liquidity Risk: Medium",
-"Liquidity Risk: High"
-];
+let result = document.getElementById("result");
 
-let whale=[
-"Whale Concentration: Low",
-"Whale Concentration: Medium",
-"Whale Concentration: High"
-];
+result.innerHTML="AI scanning token...";
 
-let contract=[
-"Contract Safety: Safe",
-"Contract Risk: Moderate",
-"Contract Risk: High"
-];
+setTimeout(()=>{
 
-document.getElementById("result").innerHTML=
+let riskScore=Math.floor(Math.random()*100);
 
-random(trust)+"<br>"+
-random(liquidity)+"<br>"+
-random(whale)+"<br>"+
-random(contract);
+let sentiment=["Bullish","Neutral","Bearish"];
+
+let randomSentiment=sentiment[Math.floor(Math.random()*3)];
+
+result.innerHTML=`
+Token: ${token.toUpperCase()} <br>
+AI Risk Score: ${riskScore}% <br>
+Market Sentiment: ${randomSentiment} <br>
+Analysis powered by AI market model
+`;
+
+},2000);
 
 }
 
-function marketSentiment(){
+function liveMarket(){
 
-let sentiment=[
-"Market Sentiment: Bullish",
-"Market Sentiment: Neutral",
-"Market Sentiment: Bearish"
-];
+let btc=(30000+Math.random()*2000).toFixed(2);
+let eth=(1800+Math.random()*200).toFixed(2);
 
-document.getElementById("sentiment").innerText=random(sentiment);
+document.getElementById("btc").innerHTML=btc;
+document.getElementById("eth").innerHTML=eth;
 
 }
 
-setInterval(marketSentiment,3000);
+setInterval(liveMarket,3000);

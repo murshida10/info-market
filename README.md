@@ -1,6 +1,6 @@
-# Binance AI Guardian
+# info market AI Guardian
 
-Binance AI Guardian is a concept AI assistant designed to help Binance users detect scam tokens and analyze crypto market risks.
+info market AI Guardian is a concept AI assistant designed to help Binance users detect scam tokens and analyze crypto market risks.
 
 Features:
 

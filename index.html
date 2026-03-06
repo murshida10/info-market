@@ -1,34 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Binance AI Guardian</title>
+
+<title>Binance Inspector</title>
+
 <link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
+
 </head>
 
 <body>
 
-<h1>Binance AI Guardian</h1>
-<p>AI Scam Detection & Trading Assistant</p>
+<div class="container">
 
-<div class="scanner">
+<header>
 
-<input id="token" placeholder="Enter Token Name">
+Binance Inspector
 
-<button onclick="scanToken()">Scan Token</button>
+<p>
+Binance Inspector is an AI-powered crypto market analyzer designed to enhance the Binance user experience. 
+It provides live market sentiment, trending coins, token risk analysis with smart contract links, 
+and helps new traders make safer decisions.
+</p>
 
-<div id="result"></div>
+</header>
+
+
+<!-- AI TOKEN SCANNER (TOP BIG) -->
+
+<div class="scanner-box">
+
+<h2>AI Token Risk Scanner</h2>
+
+<input class="scan-input" id="tokenInput" placeholder="Enter Token Symbol (BTC / ETH / BNB)">
+
+<button class="scan-btn" onclick="scanToken()">Scan Token</button>
+
+<div class="result-box" id="result"></div>
 
 </div>
 
-<div class="market">
 
-<h2>Market Sentiment</h2>
+<!-- LIVE MARKET -->
 
-<p id="sentiment">Loading market data...</p>
+<div class="market-box">
+
+<h2>Live Market Sentiment</h2>
+
+<p>BTC Price : $ <span id="btc">loading</span></p>
+
+<p>ETH Price : $ <span id="eth">loading</span></p>
+
+<p>Market Indicator : AI analyzing market volatility</p>
 
 </div>
 
-<script src="script.js"></script>
+
+<!-- TRUST MESSAGE -->
+
+<div class="powered">
+
+Powered by Binance Risk Intelligence
+
+</div>
+
+</div>
 
 </body>
+
 </html>
